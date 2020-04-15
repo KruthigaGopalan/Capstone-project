@@ -14,8 +14,8 @@ pipeline {
                     steps {
                         sh 'docker build -t kruthiga/blueimage -f blue-green/blue/Dockerfile blue-green/blue'
                         sh 'docker build -t kruthiga/greenimage -f blue-green/green/Dockerfile blue-green/green'
-                        //sh 'docker push kruthiga/blueimage'
-                        //sh 'docker push kruthiga/greenimage'
+                        sh 'docker push kruthigagopalan/blueimage'
+                        sh 'docker push kruthigagopalan/greenimage'
                         sh 'docker rmi -f kruthiga/greenimage'
                         sh 'docker rmi -f kruthiga/blueimage'
                     }
