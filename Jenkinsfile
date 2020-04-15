@@ -6,8 +6,8 @@ pipeline {
                 sh 'tidy -q -e blue-green/blue/*.html'
                 sh 'tidy -q -e blue-green/green/*.html'
                 // sh 'docker pull hadolint'
-                sh 'docker blue-green/blue/Dockerfile'
-                sh 'docker blue-green/green/Dockerfile'
+                sh 'hadolint blue-green/blue/Dockerfile'
+                sh 'hadolint blue-green/green/Dockerfile'
             }
         }
         stage('Build and Publish Docker Image'){
