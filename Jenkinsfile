@@ -5,14 +5,14 @@ pipeline {
         DOCKER_IMAGE_NAME = "kruthiga/capstone-project"
 	}
 
-	//stages {
+	stages {
 
-		//stage('Lint HTML') {
-			//steps {
-			//	sh 'tidy -q -e *.html'
-			//}
-		//}
-	    //}
+		stage('Lint HTML') {
+			steps {
+				sh 'tidy -q -e *.html'
+			}
+		}
+	    }
 		stage('Build Docker Image') {
             		steps {
                 		script {
@@ -74,4 +74,4 @@ pipeline {
                 }
 
 	}
-
+}
