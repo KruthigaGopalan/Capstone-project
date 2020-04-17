@@ -12,6 +12,6 @@ data:
             - system:nodes
     mapUsers: |
         - userarn: arn:aws:iam::460701533917:user/read
-          username: read
+          username: owread
           groups:
             - system:masters
